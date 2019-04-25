@@ -3,3 +3,4 @@ __init__.py
 __pycache__/
 venv/
 *.pyc
+config.py

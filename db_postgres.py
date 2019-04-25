@@ -1,12 +1,11 @@
 from sqlalchemy import *
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from config import *
 
 Base = declarative_base()
 
-engine = create_engine(
-    'postgresql://gtm:LoopMeIn!@coruscant.cicagwxuatyo.us-east-2.rds.amazonaws.com:5432/gtm'
-)
+engine = create_engine(DB_CONNECTION_STRING)
 
 metadata = declarative_base().metadata.create_all(bind=engine)
 
